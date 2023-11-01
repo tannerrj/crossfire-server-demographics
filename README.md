@@ -66,9 +66,6 @@ EOF
 If necessary, customize the `titles` array and `input_directory` to match your specific requirements. Save this script to a file (e.g., `player_cults.sh`), make it executable using `chmod +x player_cults.sh`, and then run it using `./player_cults.sh`. This script will create a CSV file with the results and generate a bar graph in PNG format named "bar_graph.png" based on the data in the CSV file.
 ## Screenshot
 
-
-
-
 ## Live Web Page
 
 

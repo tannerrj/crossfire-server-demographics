@@ -1,5 +1,7 @@
 # Crossfire Server Demographics - Introduction
 
+## Player Cults
+
 Show me a bash script for the following command:
 
 ```shell
@@ -46,4 +48,57 @@ plot "$csv_file" using 2:xtic(1) title ""
 EOF
 ```
 
-Make sure to customize the `titles` array and `input_directory` to match your specific requirements. Save this script to a file (e.g., `generate_graph.sh`), make it executable using `chmod +x generate_graph.sh`, and then run it using `./generate_graph.sh`. This script will create a CSV file with the results and generate a bar graph in PNG format named "bar_graph.png" based on the data in the CSV file.
+If necessary, customize the `titles` array and `input_directory` to match your specific requirements. Save this script to a file (e.g., `player_cults.sh`), make it executable using `chmod +x player_cults.sh`, and then run it using `./player_cults.sh`. This script will create a CSV file with the results and generate a bar graph in PNG format named "bar_graph.png" based on the data in the CSV file.
+
+## Player Classes/Professions
+
+Show me a bash script for the following command:
+
+```shell
+
+grep -h 'animation' */*.pl | sort | uniq -c | sort -n
+
+```
+
+And saves the results to a csv file, and then creates a bar graph from the results in the csv file
+
+----
+
+To achieve your goal, you can create a Bash script that performs the following steps:
+
+1. Run the `grep` command.
+2. Sort and count the lines.
+3. Save the results to a CSV file.
+4. Create a bar graph from the CSV file using a tool like `gnuplot`.
+
+Here's a Bash script that does this:
+
+```bash
+#!/bin/bash
+
+# Step 1: Run the grep command and store the results in a temporary file
+grep -h 'animation' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n > temp_results.txt
+
+# Step 2: Save the results to a CSV file
+awk '{print $1 "," $2}' temp_results.txt > results.csv
+
+# Step 3: Create a bar graph using gnuplot
+gnuplot <<EOF
+set datafile separator ","
+set terminal png
+set output "bar_graph.png"
+set title "Animation Count by File"
+set ylabel "Count"
+set style data histograms
+plot 'results.csv' using 2:xticlabels(1) with boxes
+EOF
+
+# Step 4: Clean up temporary files
+rm temp_results.txt
+
+echo "Results saved to results.csv and bar_graph.png"
+```
+
+Save this script to a file (e.g., `player_classes.sh`) and make it executable using `chmod +x player_classes.sh`. You can then run the script, and it will create a CSV file named `results.csv` and a bar graph image named `bar_graph.png` in the same directory.
+
+This script assumes that you have `gnuplot` installed on your system to generate the bar graph. If you don't have it installed, you can usually install it using your package manager.

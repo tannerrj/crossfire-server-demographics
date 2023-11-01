@@ -86,7 +86,7 @@ I can be reached via [tannerrj GitHub Profile](https://github.com/tannerrj)
 
 ## License:
 
-
+MIT License
 
 ## Crossfire Social Media Links
 

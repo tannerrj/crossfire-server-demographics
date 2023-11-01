@@ -21,6 +21,7 @@ A bash script the searches through all server player files and collects statisti
 Once the script is downloaded or pulled via git:
 
 ```bash
+
 #!/bin/bash
 
 # Define the titles you want to search for
@@ -52,6 +53,7 @@ set style fill solid
 set xtics rotate
 plot "$csv_file" using 2:xtic(1) title ""
 EOF
+
 ```
 
 Make sure to customize the `titles` array and `input_directory` to match your specific requirements. Save this script to a file (e.g., `generate_graph.sh`), make it executable using `chmod +x generate_graph.sh`, and then run it using `./generate_graph.sh`. This script will create a CSV file with the results and generate a bar graph in PNG format named "bar_graph.png" based on the data in the CSV file.

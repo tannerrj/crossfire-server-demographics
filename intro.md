@@ -20,6 +20,7 @@ You can create a Bash script to achieve the desired functionality using a combin
 titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Ruggilli" "Sorig" "Valriel" "Valkyrie")
 
 # Specify the input directory where your .pl files are located
+# This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
 input_directory="/path/to/your/directory"
 
 # Create a CSV file to store the results

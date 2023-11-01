@@ -6,15 +6,22 @@ A bash script the searches through all server player files and collects statisti
 
 ## Installation
 
-`grep`, `sort`, `uniq`, and `gnuplot`
+It is helpful to have git installed to download all the related code for `Crossfire Server Demographics`
 
 ### Requirements
 
+No special add-ons or installation is required as the required tools are already bundled in most Linux distributions, such as: `grep`, `sort`, `uniq`, and `gnuplot`
 
 ## Guidelines
 
 ### Description: Questions to Consider
 
+ * What is the script for?
+   * Anyone who is running a Crossfire server and wants to see what choices players are making in regards to cults, race, and class/profession
+ * What was your motivation?
+   * Working on a gaming project of [Crossfire](https://sourceforge.net/projects/crossfire/), I sometimes encounter a question on [Discord](https://crossfire.real-time.com/discord/) or [IRC](https://crossfire.real-time.com/irc/) or within one of the game servers about what people are choosing to play - this can shed some light on those choices and perhaps direct map makers on where to make content that is needed.
+ * What problem does it solve?
+   * Quickly provides simple stats and numbers on the player base for the game server
 
 ## Usage
 
@@ -78,7 +85,6 @@ Make sure to customize the `titles` array and `input_directory` to match your sp
 I can be reached via [tannerrj GitHub Profile](https://github.com/tannerrj)
 
 ## License:
-
 
 
 

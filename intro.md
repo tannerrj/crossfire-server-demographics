@@ -102,3 +102,52 @@ echo "Results saved to results.csv and bar_graph.png"
 Save this script to a file (e.g., `player_classes.sh`) and make it executable using `chmod +x player_classes.sh`. You can then run the script, and it will create a CSV file named `results.csv` and a bar graph image named `bar_graph.png` in the same directory.
 
 This script assumes that you have `gnuplot` installed on your system to generate the bar graph. If you don't have it installed, you can usually install it using your package manager.
+
+
+## Player Race/Heritage
+
+Show me a bash script for the following command
+
+```bash
+
+grep -h '_player' */*.pl | sort | uniq -c | sort -n;grep -h 'arch pl_dragon' */*.pl | sort | uniq -c | sort -n;grep -h 'pl_half_orc' */*.pl | sort | uniq -c | sort -n
+
+```
+
+And saves the results to a csv file, and then creates a bar graph from the results in the csv file
+
+----
+
+You can create a Bash script to perform the specified tasks. Here's a script that does what you're looking for:
+
+```bash
+#!/bin/bash
+
+# Define the output CSV file
+output_file="results.csv"
+
+# Run the grep commands and save the results to CSV
+grep -h '_player' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n > "$output_file"
+grep -h 'arch pl_dragon' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> "$output_file"
+grep -h 'pl_half_orc' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> "$output_file"
+
+# Create a bar graph from the CSV using gnuplot
+gnuplot <<EOF
+set datafile separator ","
+set terminal png
+set output "bar_graph.png"
+set title "Frequency Count"
+set xlabel "Count"
+set ylabel "Pattern"
+set style fill solid
+set style data histograms
+plot "$output_file" using 1:2:xtic(3) with boxes title "Pattern"
+EOF
+
+echo "Results saved to $output_file"
+echo "Bar graph saved to bar_graph.png"
+```
+
+Save this script to a file (e.g., `analyze_patterns.sh`), make it executable with `chmod +x analyze_patterns.sh`, and then run it with `./analyze_patterns.sh`. It will execute the `grep` commands, save the results to a CSV file, and create a bar graph in PNG format using gnuplot. The results will be saved in the `results.csv` file, and the bar graph will be saved as `bar_graph.png`.
+
+You will need to have gnuplot installed on your system to generate the bar graph. If it's not installed, you can typically install it using your system's package manager.

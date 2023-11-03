@@ -25,51 +25,23 @@ No special add-ons or installation is required as the required tools are already
 
 ## Usage
 
-Once the script is downloaded or pulled via git:
+Each script collects population info on a different demographic and is run individually to collect player character information.
 
-```bash
+ * `player_classes.sh`
+ * `player_cults.sh`
+ * `player_race.sh`
 
-#!/bin/bash
+Download and save the scripts or `git pull` the scripts, make them executable using `chmod +x <script-name>.sh`, and then run it using `./<script-name>.sh`.
 
-# Define the titles you want to search for
-# What is listed here is the currently available cults in Crossfire listed alphabetically, so no changes are likely in this list
-titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Ruggilli" "Sorig" "Valriel" "Valkyrie")
-
-# Specify the input directory where your .pl files are located
-# This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
-input_directory="/usr/games/crossfire/var/crossfire/players/"
-
-# Create a CSV file to store the results
-csv_file="results.csv"
-
-# Header for the CSV file
-echo "Title,Count" > "$csv_file"
-
-# Loop through the titles and perform the grep, sort, uniq operations
-for title in "${titles[@]}"; do
-    grep -h "title $title" "$input_directory"/*.pl | sort | uniq -c | sort -n >> "$csv_file"
-done
-
-# Create a bar graph from the CSV file using gnuplot
-gnuplot << EOF
-set datafile separator ","
-set term png
-set output "bar_graph.png"
-set style data histogram
-set style fill solid
-set xtics rotate
-plot "$csv_file" using 2:xtic(1) title ""
-EOF
-
-```
-
-If necessary, customize the `titles` array and `input_directory` to match your specific requirements. Save this script to a file (e.g., `player_cults.sh`), make it executable using `chmod +x player_cults.sh`, and then run it using `./player_cults.sh`. This script will create a CSV file with the results and generate a bar graph in PNG format named "bar_graph.png" based on the data in the CSV file.
+This script will create a CSV file with the results and generate a bar graph in PNG format named "bar_graph.png" based on the data in the CSV file.
 
 ## Screenshot
 
+Not available yet, work in progress.
+
 ## Live Web Page
 
-
+Not available yet, work in progress.
 
 ## Contributing
 

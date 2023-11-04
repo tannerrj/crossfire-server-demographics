@@ -10,7 +10,7 @@ awk '{print $1 "," $2}' temp_results.txt > results.csv
 gnuplot <<EOF
 set datafile separator ","
 set terminal png
-set output "bar_graph.png"
+set output "classes_bar_graph.png"
 set title "Animation Count by File"
 set ylabel "Count"
 set style data histograms
@@ -20,4 +20,4 @@ EOF
 # Step 4: Clean up temporary files
 rm temp_results.txt
 
-echo "Results saved to results.csv and bar_graph.png"
+echo "Results saved to results.csv and classes_bar_graph.png"

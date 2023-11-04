@@ -23,7 +23,7 @@ done
 gnuplot << EOF
 set datafile separator ","
 set term png
-set output "bar_graph.png"
+set output "cults_bar_graph.png"
 set style data histogram
 set style fill solid
 set xtics rotate

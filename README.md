@@ -27,8 +27,8 @@ No special add-ons or installation is required as the required tools are already
 
 Each script collects population info on a different demographic and is run individually to collect player character information.
 
- * `player_classes.sh`
- * `player_cults.sh` - collects number of players who are followings of the current in-games cults of Devourers, Gaea, Gnarg, Gorokh, Ixalovh, Lythander, Mostrai, Ruggilli, Sorig, Valriel, and Valkyrie
+ * `player_classes.sh` - 
+ * `player_cults.sh` - collects number of players who are followers of the current in-games cults of Devourers, Gaea, Gnarg, Gorokh, Ixalovh, Lythander, Mostrai, Ruggilli, Sorig, Valriel, and Valkyrie
  * `player_race.sh`
 
 Download and save the scripts or `git pull` the scripts, make them executable using `chmod +x <script-name>.sh`, and then run it using `./<script-name>.sh`.

@@ -27,7 +27,7 @@ No special add-ons or installation is required as the required tools are already
 
 Each script collects population info on a different demographic and is run individually to collect player character information.
 
- * `player_classes.sh` - 
+ * `player_classes.sh` - collects number of players who are in the current in-game classes or professions of alchemist, barbarian, devotee, evoker, sorcerer, summoner, warlock, wizard, monk, ninja, priest, swashbuckler, thief, paladin, warrior, and ranger
  * `player_cults.sh` - collects number of players who are followers of the current in-games cults of Devourers, Gaea, Gnarg, Gorokh, Ixalovh, Lythander, Mostrai, Ruggilli, Sorig, Valriel, and Valkyrie
  * `player_race.sh`
 

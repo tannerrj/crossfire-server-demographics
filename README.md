@@ -29,7 +29,7 @@ Each script collects population info on a different demographic and is run indiv
 
  * `player_classes.sh` - collects number of players who are in the current in-game classes or professions of alchemist, barbarian, devotee, evoker, sorcerer, summoner, warlock, wizard, monk, ninja, priest, swashbuckler, thief, paladin, warrior, and ranger
  * `player_cults.sh` - collects number of players who are followers of the current in-games cults of Devourers, Gaea, Gnarg, Gorokh, Ixalovh, Lythander, Mostrai, Ruggilli, Sorig, Valriel, and Valkyrie
- * `player_race.sh`
+ * `player_race.sh` - collects number of players who are in the current in-game races of dragons, dwarves, elves, fendrakis, fireborn, gnome, half orc, halfling, human, northmen, quetzalcoatls, serpent folk, trolls, and wraiths
 
 Download and save the scripts or `git pull` the scripts, make them executable using `chmod +x <script-name>.sh`, and then run it using `./<script-name>.sh`.
 

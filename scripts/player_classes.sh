@@ -14,7 +14,10 @@ set output "classes_bar_graph.png"
 set title "Player Classes"
 set ylabel "Player Classes Count"
 set xlabel "Player Classes"
+set style fill solid border lt -1
 set style data histograms
+set style histogram clustered
+set boxwidth 0.9 relative
 plot 'results.csv' using 2:xticlabels(1) with boxes
 EOF
 

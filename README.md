@@ -21,7 +21,7 @@ No special add-ons or installation is required as the required tools are already
  * What was your motivation?
    * My motivation for creating this script was rooted in my involvement with a gaming project centered around [Crossfire](https://sourceforge.net/projects/crossfire/). Frequently, I would encounter questions on platforms like [Discord](https://crossfire.real-time.com/discord/) and [IRC](https://crossfire.real-time.com/irc/), as well as within the game servers themselves, where people were curious about what characters and roles players were selecting. This tool aims to provide valuable information to help both players and map makers by shedding light on these choices and guiding map content creation.
  * What problem does it solve?
-   * Quickly provides simple stats and numbers on the player base for the game server
+   * This script efficiently offers straightforward statistics and numerical data about the player base on the game server, addressing the need for a quick and reliable way to gain insights into player choices.
 
 ## Usage
 

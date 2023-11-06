@@ -11,8 +11,9 @@ gnuplot <<EOF
 set datafile separator ","
 set terminal png enhanced font 'Arial,12' size 800,600
 set output "classes_bar_graph.png"
-set title "Animation Count by File"
-set ylabel "Count"
+set title "Player Classes"
+set ylabel "Player Classes Count"
+set xlabel "Player Classes"
 set style data histograms
 plot 'results.csv' using 2:xticlabels(1) with boxes
 EOF

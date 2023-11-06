@@ -6,11 +6,13 @@ A bash script the searches through all server player files and collects statisti
 
 ## Installation
 
-It is helpful to have git installed to download all the related code for `Crossfire Server Demographics`
+It is helpful to have `git` installed to download all the related code for `Crossfire Server Demographics`
 
 ### Requirements
 
-No special add-ons or installation is required as the required tools are already bundled in most Linux distributions, such as: `grep`, `sort`, `uniq`, and `gnuplot`
+`gnuplot` is required to generate the graphical output of the scripts.
+
+No special add-ons or installation is required as the required tools are already bundled in most Linux distributions, such as: `grep`, `sort`, and `uniq`
 
 ## Guidelines
 

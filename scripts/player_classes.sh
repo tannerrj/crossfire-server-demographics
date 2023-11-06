@@ -9,7 +9,7 @@ awk '{print $3 "," $1}' temp_results.txt > results.csv
 # Step 3: Create a bar graph using gnuplot
 gnuplot <<EOF
 set datafile separator ","
-set terminal png
+set terminal png enhanced font 'Arial,12' size 800,600
 set output "classes_bar_graph.png"
 set title "Animation Count by File"
 set ylabel "Count"

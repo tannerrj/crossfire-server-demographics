@@ -17,7 +17,7 @@ No special add-ons or installation is required as the required tools are already
 ### Description: Questions to Consider
 
  * What is the script for?
-   * Anyone who is running a Crossfire server and wants to see what choices players are making in regards to cults, race, and class/profession
+   * The scripts are designed for individuals operating a Crossfire server who wish to gain insights into the choices players are making regarding cults, races, and class/professions.
  * What was your motivation?
    * Working on a gaming project of [Crossfire](https://sourceforge.net/projects/crossfire/), I sometimes encounter a question on [Discord](https://crossfire.real-time.com/discord/) or [IRC](https://crossfire.real-time.com/irc/) or within one of the game servers about what people are choosing to play - this can shed some light on those choices and perhaps direct map makers on where to make content that is needed.
  * What problem does it solve?

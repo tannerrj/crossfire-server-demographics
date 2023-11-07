@@ -4,7 +4,7 @@
 grep -h 'animation' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n > temp_results.txt
 
 # Step 2: Save the results to a CSV file
-awk '{print $3 "," $1}' temp_results.txt > results.csv
+awk '{print $3 "," $1}' temp_results.txt > player_class_results.csv
 
 # Step 3: Create a bar graph using gnuplot
 gnuplot <<EOF
@@ -20,7 +20,7 @@ set style histogram clustered
 set boxwidth 0.9 relative
 set xtics rotate
 set key autotitle columnheader
-plot 'results.csv' using 2:xticlabels(1) with boxes
+plot 'player_class_results.csv' using 2:xticlabels(1) with boxes
 EOF
 
 # Step 4: Clean up temporary files

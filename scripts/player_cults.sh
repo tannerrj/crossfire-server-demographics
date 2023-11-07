@@ -27,6 +27,7 @@ set output "cults_bar_graph.png"
 set title "Player Cults"
 set ylabel "Player Cults Count"
 set xlabel "Player Cults"
+set style fill solid border lt -1
 set style data histogram
 set style fill solid
 set xtics rotate

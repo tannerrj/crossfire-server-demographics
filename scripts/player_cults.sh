@@ -22,7 +22,7 @@ done
 # Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","
-set term png
+set term png enhanced font 'Arial,12' size 800,600
 set output "cults_bar_graph.png"
 set style data histogram
 set style fill solid

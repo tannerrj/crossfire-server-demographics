@@ -29,6 +29,7 @@ set ylabel "Player Cults Count"
 set xlabel "Player Cults"
 set style fill solid border lt -1
 set style data histogram
+set style histogram clustered
 set style fill solid
 set xtics rotate
 plot "$csv_file" using 2:xtic(1) title ""

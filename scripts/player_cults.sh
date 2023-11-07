@@ -24,6 +24,9 @@ gnuplot << EOF
 set datafile separator ","
 set term png enhanced font 'Arial,12' size 800,600
 set output "cults_bar_graph.png"
+set title "Player Cults"
+set ylabel "Player Cults Count"
+set xlabel "Player Cults"
 set style data histogram
 set style fill solid
 set xtics rotate

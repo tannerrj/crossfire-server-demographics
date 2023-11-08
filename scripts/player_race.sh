@@ -19,6 +19,7 @@ set xlabel "Player Races"
 set style fill solid border lt -1
 set style data histogram
 set style histogram clustered
+set boxwidth 0.9 relative
 plot "$output_file" using 1:2:xtic(3) with boxes title "Pattern"
 EOF
 

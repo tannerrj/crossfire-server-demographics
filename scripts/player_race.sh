@@ -16,8 +16,9 @@ set output "race_bar_graph.png"
 set title "Player Races"
 set ylabel "Player Races Count"
 set xlabel "Player Races"
-set style fill solid
-set style data histograms
+set style fill solid border lt -1
+set style data histogram
+set style histogram clustered
 plot "$output_file" using 1:2:xtic(3) with boxes title "Pattern"
 EOF
 

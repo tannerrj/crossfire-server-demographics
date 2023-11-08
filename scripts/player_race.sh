@@ -21,6 +21,7 @@ set style data histogram
 set style histogram clustered
 set boxwidth 0.9 relative
 set xtics rotate
+set key autotitle columnheader
 plot "$output_file" using 1:2:xtic(3) with boxes title "Pattern"
 EOF
 

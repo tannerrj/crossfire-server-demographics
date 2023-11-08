@@ -11,7 +11,7 @@ grep -h 'pl_half_orc' */*.pl | sort | uniq -c | sort -n >> "$output_file"
 # Create a bar graph from the CSV using gnuplot
 gnuplot <<EOF
 set datafile separator ","
-set terminal png
+set terminal png enhanced font 'Arial,12' size 800,600
 set output "race_bar_graph.png"
 set title "Frequency Count"
 set xlabel "Count"

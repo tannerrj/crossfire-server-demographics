@@ -14,8 +14,8 @@ set datafile separator ","
 set terminal png enhanced font 'Arial,12' size 800,600
 set output "race_bar_graph.png"
 set title "Player Races"
-set xlabel "Count"
-set ylabel "Pattern"
+set ylabel "Player Races Count"
+set xlabel "Player Races"
 set style fill solid
 set style data histograms
 plot "$output_file" using 1:2:xtic(3) with boxes title "Pattern"

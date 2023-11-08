@@ -13,7 +13,7 @@ gnuplot <<EOF
 set datafile separator ","
 set terminal png enhanced font 'Arial,12' size 800,600
 set output "race_bar_graph.png"
-set title "Frequency Count"
+set title "Player Races"
 set xlabel "Count"
 set ylabel "Pattern"
 set style fill solid

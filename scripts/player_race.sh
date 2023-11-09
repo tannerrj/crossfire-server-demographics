@@ -11,7 +11,7 @@ awk '{print $1 "," $3}' tmp_results.txt > player_race_results.csv
 # Create a bar graph using gnuplot
 gnuplot <<EOF
 set datafile separator ","
-set terminal png
+set terminal png enhanced font 'Arial,12' size 800,600
 set output "races_bar_graph.png"
 set title "Player Statistics"
 set xlabel "Count"

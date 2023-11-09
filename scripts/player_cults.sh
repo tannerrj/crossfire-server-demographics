@@ -29,7 +29,7 @@ set datafile separator ","
 set term png enhanced font 'Arial,12' size 800,600
 set output "cults_bar_graph.png"
 set title "Player Cults"
-set ylabel "Player Cults Count"
+set ylabel "Player Count"
 set xlabel "Player Cults"
 set style fill solid border lt -1
 set style data histogram

@@ -21,6 +21,8 @@ done
 
 awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
 
+awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv
+
 # Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","

@@ -8,13 +8,13 @@ titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Rug
 # This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
 input_directory="/usr/games/crossfire/var/crossfire/players/"
 
-# Create a CSV file to store the results
+# Step 3: Create a CSV file to store the results
 csv_file="cults_results.csv"
 
 # Header for the CSV file
 # echo "Title,Count" > "$csv_file"
 
-# Loop through the titles and perform the grep, sort, uniq operations
+# Step 4: Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do
     grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done

@@ -6,7 +6,7 @@ grep -h 'arch pl_dragon' /usr/games/crossfire/var/crossfire/players/*/*.pl | sor
 grep -h 'pl_half_orc' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> tmp_results.txt
 
 # Create a CSV file from the temporary file
-awk '{print $1 "," $2}' tmp_results.txt > player_race_results.csv
+awk '{print $1 "," $3}' tmp_results.txt > player_race_results.csv
 
 # Create a bar graph using gnuplot
 gnuplot <<EOF

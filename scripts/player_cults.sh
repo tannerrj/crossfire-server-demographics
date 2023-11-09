@@ -5,8 +5,8 @@
 titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Ruggilli" "Sorig" "Valriel" "Valkyrie")
 
 # Specify the input directory where your .pl files are located
-# This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players
-input_directory="/usr/games/crossfire/var/crossfire/players"
+# This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
+input_directory="/usr/games/crossfire/var/crossfire/players/"
 
 # Create a CSV file to store the results
 csv_file="cults-results.csv"

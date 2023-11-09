@@ -12,7 +12,7 @@ awk '{print $1 "," $2}' tmp_results.txt > player_race_results.csv
 gnuplot <<EOF
 set datafile separator ","
 set terminal png
-set output "bar_graph.png"
+set output "races_bar_graph.png"
 set title "Player Statistics"
 set xlabel "Count"
 set ylabel "Player Race"

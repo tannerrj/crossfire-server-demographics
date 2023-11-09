@@ -19,6 +19,7 @@ set ylabel "Player Race"
 set style data histogram
 set style histogram cluster
 set style fill solid border -1
+set xtics rotate
 plot "player_race_results.csv" using 1:xtic(2) title ""
 EOF
 

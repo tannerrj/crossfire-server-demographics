@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Define the titles you want to search for
+# Step 1: Define the titles you want to search for
 # What is listed here is the currently available cults in Crossfire listed alphabetically, so no changes are likely in this list
 titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Ruggilli" "Sorig" "Valriel" "Valkyrie")
 

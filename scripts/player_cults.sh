@@ -9,7 +9,7 @@ titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Rug
 input_directory="/usr/games/crossfire/var/crossfire/players/"
 
 # Create a CSV file to store the results
-csv_file="cults-results.csv"
+csv_file="cults_results.csv"
 
 # Header for the CSV file
 # echo "Title,Count" > "$csv_file"

@@ -4,7 +4,7 @@
 # What is listed here is the currently available cults in Crossfire listed alphabetically, so no changes are likely in this list
 titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Ruggilli" "Sorig" "Valriel" "Valkyrie")
 
-# Specify the input directory where your .pl files are located
+# Step 2: Specify the input directory where your .pl files are located
 # This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
 input_directory="/usr/games/crossfire/var/crossfire/players/"
 

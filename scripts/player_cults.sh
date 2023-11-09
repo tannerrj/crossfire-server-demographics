@@ -19,6 +19,7 @@ for title in "${titles[@]}"; do
     grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done
 
+# Step 5: Update results file to replace title text with a single comma
 awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
 
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv

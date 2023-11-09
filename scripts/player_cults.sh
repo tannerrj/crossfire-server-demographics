@@ -25,7 +25,7 @@ awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
 # Step 6: Sort the results file so they in the format of number , cult-name
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv
 
-# Create a bar graph from the CSV file using gnuplot
+# Step 7: Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","
 set term png enhanced font 'Arial,12' size 800,600

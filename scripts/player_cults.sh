@@ -16,7 +16,7 @@ echo "Title,Count" > "$csv_file"
 
 # Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do
-    grep -h "title $title" "$input_directory"/*.pl | sort | uniq -c | sort -n >> "$csv_file"
+    grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done
 
 # Create a bar graph from the CSV file using gnuplot

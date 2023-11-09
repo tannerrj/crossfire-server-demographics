@@ -24,7 +24,7 @@ plot "player_race_results.csv" using 1:xtic(2) title ""
 EOF
 
 # Clean up temporary file
-rm tmp_results.txt
+# rm tmp_results.txt
 
 echo "Results saved to player_race_results.csv"
 echo "Bar graph saved to player_race_bar_graph.png"

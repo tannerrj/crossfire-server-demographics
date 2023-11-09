@@ -19,6 +19,8 @@ for title in "${titles[@]}"; do
     grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done
 
+awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
+
 # Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","

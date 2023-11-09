@@ -12,7 +12,7 @@ input_directory="/usr/games/crossfire/var/crossfire/players/"
 csv_file="cults-results.csv"
 
 # Header for the CSV file
-echo "Title,Count" > "$csv_file"
+# echo "Title,Count" > "$csv_file"
 
 # Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do

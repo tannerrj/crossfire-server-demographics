@@ -22,6 +22,7 @@ done
 # Step 5: Update results file to replace title text with a single comma
 awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
 
+# Step 6: Sort the results file so they in the format of number , cult-name
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv
 
 # Create a bar graph from the CSV file using gnuplot

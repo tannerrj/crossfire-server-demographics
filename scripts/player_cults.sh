@@ -37,5 +37,5 @@ set style histogram clustered
 set boxwidth 0.9 relative
 set xtics rotate
 set key autotitle columnheader
-plot "$csv_file" using 2:xtic(1) title ""
+plot 'updated_cults_results.csv' using 2:xticlabels(1) with boxes
 EOF

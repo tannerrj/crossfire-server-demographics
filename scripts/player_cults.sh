@@ -41,3 +41,6 @@ set xtics rotate
 set key autotitle columnheader
 plot 'updated_cults_results.csv' using 2:xticlabels(1) with boxes
 EOF
+
+echo "Results saved to cults_results.csv"
+echo "Bar graph saved to cults_bar_graph.png"

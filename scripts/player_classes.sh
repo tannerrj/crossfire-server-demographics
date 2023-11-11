@@ -26,4 +26,5 @@ EOF
 # Step 4: Clean up temporary files
 rm temp_results.txt
 
-echo "Results saved to results.csv and classes_bar_graph.png"
+echo "Results saved to player_class_results.csv"
+echo "Results saved to classes_bar_graph.png"

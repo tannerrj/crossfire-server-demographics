@@ -8,7 +8,7 @@ grep -h 'pl_half_orc' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort |
 # Step 2. Create a CSV file from the temporary file
 awk '{print $1 "," $3}' tmp_results.txt > player_race_results.csv
 
-# Create a bar graph using gnuplot
+# Step 3. Create a bar graph using gnuplot
 gnuplot <<EOF
 set datafile separator ","
 set terminal png enhanced font 'Arial,12' size 800,600

@@ -24,7 +24,7 @@ set xtics rotate
 plot "player_race_results.csv" using 1:xtic(2) title ""
 EOF
 
-# Clean up temporary file
+# Step 4. Clean up temporary file
 # rm tmp_results.txt
 
 echo "Results saved to player_race_results.csv"

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Run grep commands and save results to a temporary file
+# Step 1. Run grep commands and save results to a temporary file
 grep -h '_player' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n > tmp_results.txt
 grep -h 'arch pl_dragon' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> tmp_results.txt
 grep -h 'pl_half_orc' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> tmp_results.txt

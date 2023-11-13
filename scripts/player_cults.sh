@@ -39,7 +39,7 @@ set style histogram clustered
 set boxwidth 0.9 relative
 set xtics rotate
 set key autotitle columnheader
-plot 'updated_cults_results.csv' using 2:xticlabels(1) with boxes
+plot 'updated_cults_results.csv' using 2:xticlabels(1) with boxes, 'updated_cults_results.csv' using 1:2:2 with labels
 EOF
 
 echo "Results saved to cults_results.csv"

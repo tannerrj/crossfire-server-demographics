@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Step 1: Run the grep command and store the results in a temporary file
-grep -h 'animation' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n > temp_results.txt
+grep -h 'animation' /usr/games/crossfire/var/crossfire/players/*/*.pl | grep -v -e 'goose' -e 'wand' -e 'pl_dragon_bl' -e 'NONE' -e 'pl_dragon_blue' -e 'pl_dragon_g' | sort | uniq -c | sort -n > temp_results.txt
 
 # Step 2: Save the results to a CSV file
 awk '{print $3 "," $1}' temp_results.txt > player_class_results.csv

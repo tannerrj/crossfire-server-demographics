@@ -16,7 +16,7 @@ csv_file="cults_results.csv"
 
 # Step 4: Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do
-    grep -h "title $title" "$input_directory"*/*.pl | grep -v -e 'Devourers Holy Servant' | sort | uniq -c | sort -n >> "$csv_file"
+    grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done
 
 # Step 5: Update results file to replace title text with a single comma

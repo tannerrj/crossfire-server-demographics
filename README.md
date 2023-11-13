@@ -39,7 +39,12 @@ This script will create a CSV file with the results and generate a bar graph in 
 
 ## Screenshot
 
-Not available yet, work in progress.
+ * Sample of currently selected player classes
+ ![Player Classes Graph](images/classes_bar_graph.png)
+ * Sample of currently selected cults
+ ![Cults Graph](images/cults_bar_graph.png)
+ * Sample of currently selected player races
+ ![Player Race Graph](images/races_bar_graph.png)
 
 ## Live Web Page
 

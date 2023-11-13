@@ -42,5 +42,35 @@ set key autotitle columnheader
 plot 'updated_cults_results.csv' using 2:xticlabels(1) with boxes
 EOF
 
+# This Gnuplot code is used to generate a clustered bar graph from a CSV file named 'updated_cults_results.csv.' Let's break down the code step by step:
+#
+# 1. `set datafile separator ","`: Specifies that the comma (`,`) is used as the field separator in the CSV file.
+#
+# 2. `set term png enhanced font 'Arial,12' size 800,600`: Sets the output terminal to PNG format with enhanced mode, using the Arial font at size 12, and the graph size is set to 800x600 pixels.
+#
+# 3. `set output "cults_bar_graph.png"`: Specifies the output file name for the generated plot as "cults_bar_graph.png."
+#
+# 4. `set title "Player Cults"`: Sets the title of the plot as "Player Cults."
+#
+# 5. `set ylabel "Player Count"`: Sets the label for the y-axis as "Player Count."
+#
+# 6. `set xlabel "Player Cults"`: Sets the label for the x-axis as "Player Cults."
+#
+# 7. `set style fill solid border lt -1`: Sets the style for filling the boxes in the histogram plot as solid with no border.
+#
+# 8. `set style data histogram`: Specifies that the data to be plotted is in histogram format.
+#
+# 9. `set style histogram clustered`: Configures the histogram to be clustered, meaning that bars for each data point will be grouped together.
+#
+# 10. `set boxwidth 0.9 relative`: Sets the width of the boxes in the histogram to 90% of the space between clusters.
+#
+# 11. `set xtics rotate`: Rotates the x-axis tic labels for better readability.
+#
+# 12. `set key autotitle columnheader`: Uses the column headers from the CSV file as titles for the legend.
+#
+# 13. `plot 'updated_cults_results.csv' using 2:xticlabels(1) with boxes`: Plots the data from the CSV file. It uses the values in the second column for the y-axis and the first column for x-axis tic labels. The `with boxes` option specifies that the data should be plotted as boxes in the histogram.
+#
+# In summary, this Gnuplot script generates a clustered bar graph illustrating the player count for different player cults using data from the 'updated_cults_results.csv' file. The x-axis represents different player cults, the y-axis represents the player count, and each cluster of bars corresponds to a different data point in the CSV file.
+
 echo "Results saved to cults_results.csv"
 echo "Bar graph saved to cults_bar_graph.png"

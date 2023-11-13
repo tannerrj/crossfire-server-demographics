@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Step 1. Run grep commands and save results to a temporary file
-grep -h '_player' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n > tmp_results.txt
+grep -h '_player' /usr/games/crossfire/var/crossfire/players/*/*.pl | grep -v -e 'fenx_player_class_warrior' -e 'human_player_force' -e 'fenx_player_force' -e 'troll_player_force' -e 'wraith_player_force' -e 'fireborn_player_force' -e 'valriel_player_glow' -e 'elf_player_force' -e 'no_fix_player 1' | sort | uniq -c | sort -n > tmp_results.txt
 grep -h 'arch pl_dragon' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> tmp_results.txt
 grep -h 'pl_half_orc' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort | uniq -c | sort -n >> tmp_results.txt
 

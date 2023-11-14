@@ -11,6 +11,8 @@ grep -h 'pl_half_orc' /usr/games/crossfire/var/crossfire/players/*/*.pl | sort |
 # Step 2. Create a CSV file from the temporary file
 awk '{print $1 "," $3}' tmp_results.txt > player_race_results.csv
 
+echo "Results saved to player_race_results.csv"
+
 # Step 3. Create a bar graph using gnuplot
 gnuplot <<EOF
 set datafile separator ","
@@ -30,5 +32,4 @@ EOF
 # Step 4. Clean up temporary file
 # rm tmp_results.txt
 
-echo "Results saved to player_race_results.csv"
 echo "Bar graph saved to races_bar_graph.png"

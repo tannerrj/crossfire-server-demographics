@@ -6,6 +6,8 @@ grep -h 'animation' /usr/games/crossfire/var/crossfire/players/*/*.pl | grep -v 
 # Step 2: Save the results to a CSV file
 awk '{print $3 "," $1}' temp_results.txt > player_class_results.csv
 
+echo "Results saved to player_class_results.csv"
+
 # Step 3: Create a bar graph using gnuplot
 gnuplot <<EOF
 set datafile separator ","
@@ -26,5 +28,4 @@ EOF
 # Step 4: Clean up temporary files
 rm temp_results.txt
 
-echo "Results saved to player_class_results.csv"
 echo "Results saved to classes_bar_graph.png"

@@ -11,9 +11,6 @@ input_directory="/usr/games/crossfire/var/crossfire/players/"
 # Step 3: Create a CSV file to store the results
 csv_file="cults_results.csv"
 
-# Header for the CSV file
-# echo "Title,Count" > "$csv_file"
-
 # Step 4: Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do
     grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"

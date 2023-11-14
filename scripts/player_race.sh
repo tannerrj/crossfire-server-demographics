@@ -31,4 +31,4 @@ EOF
 # rm tmp_results.txt
 
 echo "Results saved to player_race_results.csv"
-echo "Bar graph saved to player_race_bar_graph.png"
+echo "Bar graph saved to races_bar_graph.png"

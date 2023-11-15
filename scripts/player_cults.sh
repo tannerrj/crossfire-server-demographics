@@ -4,27 +4,34 @@
 # What is listed here is the currently available cults in Crossfire listed alphabetically, so no changes are likely in this list
 titles=("Devourers" "Gaea" "Gnarg" "Gorokh" "Ixalovh" "Lythander" "Mostrai" "Ruggilli" "Sorig" "Valriel" "Valkyrie")
 
-# Step 2: Specify the input directory where your .pl files are located
+# Step 2: Check to make sure the input diretory exists, and if not display the error message
+
+if [ ! -d "$input_directory" ]; then
+    echo "Error: Input directory does not exist."
+    exit 1
+fi
+
+# Step 3: Specify the input directory where your .pl files are located
 # This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
 input_directory="/usr/games/crossfire/var/crossfire/players/"
 
-# Step 3: Create a CSV file to store the results
+# Step 4: Create a CSV file to store the results
 csv_file="cults_results.csv"
 
-# Step 4: Loop through the titles and perform the grep, sort, uniq operations
+# Step 5: Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do
     grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done
 
-# Step 5: Update results file to replace title text with a single comma
+# Step 6: Update results file to replace title text with a single comma
 awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
 
-# Step 6: Sort the results file so they in the format of number , cult-name
+# Step 7: Sort the results file so they in the format of number , cult-name
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv
 
 echo "Results saved to updated_cults_results.csv"
 
-# Step 7: Create a bar graph from the CSV file using gnuplot
+# Step 8: Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","
 set term png enhanced font 'Arial,12' size 800,600

@@ -18,7 +18,6 @@ if [ -z "$(find "$input_directory" -name '*.pl' -print -quit)" ]; then
     exit 1
 fi
 
-
 # Step 4: Specify the input directory where your .pl files are located
 # This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
 input_directory="/usr/games/crossfire/var/crossfire/players/"

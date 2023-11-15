@@ -78,4 +78,6 @@ EOF
 #
 # In summary, this Gnuplot script generates a clustered bar graph illustrating the player count for different player cults using data from the 'updated_cults_results.csv' file. The x-axis represents different player cults, the y-axis represents the player count, and each cluster of bars corresponds to a different data point in the CSV file.
 
+
+# Step 9: Indicate that the graph and graphic has been created
 echo "Bar graph saved to cults_bar_graph.png"

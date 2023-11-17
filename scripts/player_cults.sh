@@ -31,7 +31,7 @@ for title in "${titles[@]}"; do
 done
 
 # Step 7: Update results file to replace title text with a single comma
-awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
+awk '{gsub(/title/, ","); print}' "$csv_file" > modified_cults_results.csv
 
 # Step 8: Sort the results file so they in the format of number, cult-name
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv

@@ -18,28 +18,37 @@ if [ -z "$(find "$input_directory" -name '*.pl' -print -quit)" ]; then
     exit 1
 fi
 
-# Step 4: Specify the input directory where your .pl files are located
+# Step 4: Check if the necessary commands (grep, sort, uniq, awk, gnuplot) are available in the system
+
+for cmd in grep sort uniq awk gnuplot; do
+    if ! command -v "$cmd" > /dev/null; then
+        echo "Error: $cmd command not found."
+        exit 1
+    fi
+done
+
+# Step 5: Specify the input directory where your .pl files are located
 # This is a directory path that you modify and is most likely /usr/games/crossfire/var/crossfire/players/
 input_directory="/usr/games/crossfire/var/crossfire/players/"
 
-# Step 5: Create a CSV file to store the results
+# Step 6: Create a CSV file to store the results
 csv_file="cults_results.csv"
 
-# Step 6: Loop through the titles and perform the grep, sort, uniq operations
+# Step 7: Loop through the titles and perform the grep, sort, uniq operations
 for title in "${titles[@]}"; do
     grep -h "title $title" "$input_directory"*/*.pl | sort | uniq -c | sort -n >> "$csv_file"
 done
 
-# Step 7: Update results file to replace title text with a single comma
+# Step 8: Update results file to replace title text with a single comma
 awk '{gsub(/title/, ","); print}' "$csv_file" > modified_cults_results.csv
 
-# Step 8: Sort the results file so they in the format of number, cult-name
+# Step 9: Sort the results file so they in the format of number, cult-name
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv
 
-# Step 9: Indicate that the csv file has been created
+# Step 10: Indicate that the csv file has been created
 echo "Results saved to updated_cults_results.csv"
 
-# Step 10: Create a bar graph from the CSV file using gnuplot
+# Step 11: Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","
 set term png enhanced font 'Arial,12' size 800,600
@@ -87,5 +96,5 @@ EOF
 # In summary, this Gnuplot script generates a clustered bar graph illustrating the player count for different player cults using data from the 'updated_cults_results.csv' file. The x-axis represents different player cults, the y-axis represents the player count, and each cluster of bars corresponds to a different data point in the CSV file.
 
 
-# Step 11: Indicate that the graph and graphic has been created
+# Step 12: Indicate that the graph and graphic has been created
 echo "Bar graph saved to cults_bar_graph.png"

@@ -36,9 +36,10 @@ awk '{gsub(/title/, ","); print}' cults_results.csv > modified_cults_results.csv
 # Step 8: Sort the results file so they in the format of number, cult-name
 awk '{print $3 "," $1}' modified_cults_results.csv > updated_cults_results.csv
 
+# Step 9: Indicate that the csv file has been created
 echo "Results saved to updated_cults_results.csv"
 
-# Step 9: Create a bar graph from the CSV file using gnuplot
+# Step 10: Create a bar graph from the CSV file using gnuplot
 gnuplot << EOF
 set datafile separator ","
 set term png enhanced font 'Arial,12' size 800,600
@@ -86,5 +87,5 @@ EOF
 # In summary, this Gnuplot script generates a clustered bar graph illustrating the player count for different player cults using data from the 'updated_cults_results.csv' file. The x-axis represents different player cults, the y-axis represents the player count, and each cluster of bars corresponds to a different data point in the CSV file.
 
 
-# Step 10: Indicate that the graph and graphic has been created
+# Step 11: Indicate that the graph and graphic has been created
 echo "Bar graph saved to cults_bar_graph.png"

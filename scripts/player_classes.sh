@@ -29,4 +29,5 @@ EOF
 # Step 5: Clean up temporary files
 rm temp_results.txt
 
+# Step 6: Indicate the graphic file has been created
 echo "Results saved to classes_bar_graph.png"

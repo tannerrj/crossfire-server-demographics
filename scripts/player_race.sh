@@ -32,4 +32,5 @@ EOF
 # Step 4. Clean up temporary file
 rm tmp_results.txt
 
+# Step 5: Indicate that the graph and graphic has been created
 echo "Bar graph saved to races_bar_graph.png"

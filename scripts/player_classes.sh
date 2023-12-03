@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Script: player_classes.sh
+# Author: Rick Tanner via ChatGPT
+# Description: This script searches through all server player files and collects statistics on which class the players have chosen to play or use and then assembles a bar graph with this information.
+
 # Step 1: Run the grep command and store the results in a temporary file
 grep -h 'animation' /usr/games/crossfire/var/crossfire/players/*/*.pl | grep -v -e 'goose' -e 'wand' -e 'pl_dragon_bl' -e 'NONE' -e 'pl_dragon_blue' -e 'pl_dragon_g' | sort | uniq -c | sort -n > temp_results.txt
 

@@ -3,6 +3,7 @@
 # Script: player_race.sh
 # Author: Rick Tanner via ChatGPT
 # Description: This script searches through all server player files and collects statistics on which race the players have chosen to play or use and then assembles a bar graph with this information.
+# Project URL: https://github.com/tannerrj/crossfire-server-demographics
 
 # Step 1: Run grep commands and save results to a temporary file
 # First pass searches for all _player references with a list of exceptions

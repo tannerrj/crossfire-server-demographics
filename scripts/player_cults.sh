@@ -3,6 +3,7 @@
 # Script: player_cults.sh
 # Author: Rick Tanner via ChatGPT
 # Description: This script searches through all server player files and collects statistics on which cult the players have chosen to play or use and then assembles a bar graph with this information.
+# Project URL: https://github.com/tannerrj/crossfire-server-demographics
 
 # Step 1: Define the titles you want to search for
 # What is listed here is the currently available cults in Crossfire listed alphabetically, so no changes are likely in this list

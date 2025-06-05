@@ -66,6 +66,7 @@ MIT License
 
 ## Crossfire Social Media Links
 
+ * [BlueSky](https://bsky.app/profile/crossfireproject.bsky.social)
  * [Facebook](https://www.facebook.com/crossfireproject/)
  * [Mastodon](https://mastodon.social/@crossfiremrpg)
  * [X (Formerly Twitter)](https://twitter.com/crossfiremrpg/)
